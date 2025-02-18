@@ -11,7 +11,6 @@ const ProductCard = ({ product }) => {
 
     return (
         <div className="relative group bg-secondary p-4 rounded-lg shadow-lg">
-            {/* Product Image */}
             <div className="relative w-full h-64 bg-primary flex items-center justify-center">
                 <img
                     src={product.image}
@@ -19,7 +18,6 @@ const ProductCard = ({ product }) => {
                     className="w-full h-full object-contain bg-secondary"
                 />
 
-                {/* Wishlist Button */}
                 <div className="absolute right-0 top-0 flex flex-col gap-2">
                     <button
                         className="bg-primary p-2 rounded-full shadow hover:bg-primary transition"
@@ -27,12 +25,14 @@ const ProductCard = ({ product }) => {
                     >
                         <FaHeart
                             className={`w-5 h-5 ${isHeartFilled ? "text-white" : "text-gray-400"}`}
-                            style={{ fill: isHeartFilled ? "white" : "none" }}
+                            style={{
+                                fill: isHeartFilled ? "white" : "#232323",
+                            }}
                         />
                     </button>
                 </div>
 
-                {/* Hover Action Buttons */}
+
                 <div className="absolute right-0 top-11 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-[-50px] group-hover:translate-y-0">
                     <button className="bg-primary p-2 rounded-full shadow hover:bg-primary transition">
                         <FiShoppingCart className="text-white w-5 h-5" />
@@ -43,11 +43,8 @@ const ProductCard = ({ product }) => {
                 </div>
             </div>
 
-            {/* Product Info */}
             <div className="mt-4 text-white">
                 <h2 className="text-heading">{product.name}</h2>
-
-                {/* Rating */}
                 <div className="flex space-x-1 mt-2">
                     {[...Array(5)].map((_, i) => (
                         <FaStar
@@ -58,8 +55,6 @@ const ProductCard = ({ product }) => {
                     ))}
                     <div>(10)</div>
                 </div>
-
-                {/* Pricing */}
                 <div className="flex items-center justify-between gap-1 mt-2">
                     <h2 className="text-heading">${product.price}</h2>
                     {product.oldPrice && (
