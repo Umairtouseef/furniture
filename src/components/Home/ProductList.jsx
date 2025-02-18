@@ -1,116 +1,151 @@
-import React, { useEffect, useRef } from "react";
-import { motion } from "framer-motion";
-import { FaHeart, FaShoppingCart, FaSearch } from "react-icons/fa";
-
-const products = [
-    {
-        image: "https://cdn.mos.cms.futurecdn.net/fhLfnNSZdVKGXJgaURaVBP-1280-80.jpg.webp",
-        name: "Black Mojito",
-        price: "220.00",
-        oldPrice: "230.00",
-        rating: 4,
-    },
-    {
-        image: "https://cdn.mos.cms.futurecdn.net/fhLfnNSZdVKGXJgaURaVBP-1280-80.jpg.webp",
-        name: "White Cheery Glato",
-        price: "350.00",
-        rating: 4,
-    },
-    {
-        image: "https://themes.pixelstrap.com/multikart/assets/images/marijuana/pro/24.jpg",
-        name: "Almond Mochi",
-        price: "225.50",
-        rating: 4,
-    },
-];
-
-const ProductCard = ({ product }) => {
-    return (
-        <div className="relative group border rounded-lg overflow-hidden shadow-md hover:shadow-lg bg-white w-full sm:w-[350px]">
-            <div className="relative w-full h-64">
-                <img
-                    src={product.image}
-                    alt={product.name}
-                    className="w-full h-full object-cover"
-                />
-                 <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <button className="bg-white/90 text-secondary p-4 rounded-full transition duration-300 hover:bg-secondary hover:text-white">
-                        <FaSearch size={15} />
-                    </button>
-                </div>
-
-                <div className="absolute bottom-2 left-2 right-2 flex justify-around opacity-0 group-hover:opacity-100 translate-y-5 group-hover:translate-y-0 transition-all duration-300 ease-out">
-                    <button className="bg-white/90 text-secondary p-4 rounded-full transition duration-300 hover:bg-secondary hover:text-white">
-                        <FaHeart size={15} />
-                    </button>
-                    <button className="bg-white/90 text-secondary px-8 py-3 transition duration-300 hover:bg-secondary hover:text-white">
-                        Add to Cart
-                    </button>
-                    <button className="bg-white/90 text-secondary p-4 rounded-full transition duration-300 hover:bg-secondary hover:text-white">
-                        <FaShoppingCart size={15} />
-                    </button>
-                </div>
-            </div>
-
-            <div className="p-4 text-center">
-                <div className="flex justify-center space-x-1 text-yellow-500 mb-2">
-                    {[...Array(5)].map((_, i) => (
-                        <span key={i} className={i < product.rating ? "text-yellow-500" : "text-gray-300"}>★</span>
-                    ))}
-                </div>
-
-                <h3 className="text-lg font-semibold text-heading">{product.name}</h3>
-                <p className="text-grayText">
-                    <span className="text-black font-bold">${product.price}</span>
-                    {product.oldPrice && (
-                        <span className="text-gray-500 line-through ml-2">${product.oldPrice}</span>
-                    )}
-                </p>
-            </div>
-        </div>
-    );
-};
+import React from "react";
+import prod1 from "/assets/prod1.png";
+import prod2 from "/assets/prod2.png";
+import prod3 from "/assets/prod3.png";
+import prod4 from "/assets/prod4.png";
+import prod6 from "/assets/prod6.png";
+import prod7 from "/assets/prod7.png";
+import prod8 from "/assets/prod8.png";
+import verticalbanner from "/assets/verticalbanner.png";
+import ProductCard from "./Product";
 
 const ProductList = () => {
-    const containerRef = useRef(null);
+    const products = [
+        {
+            id: 1,
+            name: "Woodan Diwan",
+            image: prod1,
+            price: "29.99",
+            oldPrice: "49.99",
+            rating: 4,
+        },
+        {
+            id: 2,
+            name: "Wing Lounge Chair",
+            image: prod2,
+            price: "19.99",
+            oldPrice: "39.99",
+            rating: 3,
+        },
+        {
+            id: 3,
+            name: "Egon Wood Chair",
+            image: prod3,
+            price: "15.99",
+            oldPrice: "25.99",
+            rating: 5,
+        },
+        {
+            id: 4,
+            name: "Woodan Center Table",
+            image: prod3,
+            price: "15.99",
+            oldPrice: "25.99",
+            rating: 2,
+        },
+        {
+            id: 5,
+            name: "Woodan Center Table",
+            image: prod4,
+            price: "15.99",
+            oldPrice: "25.99",
+            rating: 4,
+        },
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            if (containerRef.current) {
-                let productWidth = containerRef.current.firstChild.clientWidth + 24; 
-                containerRef.current.scrollBy({ left: productWidth, behavior: "smooth" });
-                if (containerRef.current.scrollLeft + containerRef.current.clientWidth >= containerRef.current.scrollWidth) {
-                    containerRef.current.scrollTo({ left: 0, behavior: "smooth" });
-                }
-            }
-        }, 2500);
-
-        return () => clearInterval(interval);
-    }, []);
+        {
+            id: 6,
+            name: "Woodan Diwan",
+            image: prod1,
+            price: "29.99",
+            oldPrice: "49.99",
+            rating: 4,
+        },
+        {
+            id: 7,
+            name: "Wing Lounge Chair",
+            image: prod2,
+            price: "19.99",
+            oldPrice: "39.99",
+            rating: 3,
+        },
+        {
+            id: 8,
+            name: "Egon Wood Chair",
+            image: prod3,
+            price: "15.99",
+            oldPrice: "25.99",
+            rating: 5,
+        },
+    ];
 
     return (
-        <div className="overflow-hidden px-8 py-8 bg-white">
-            <div className="text-center">
-                <h4 className="text-secondary font-medium">Special Offer</h4>
-                <h2 className="text-h2 text-heading font-bold mt-2">NEW PRODUCTS</h2>
-                <div className="w-20 border-t-4 border-secondary my-6 mx-auto"></div>
+        <section className="container mx-auto px-6 py-12 mt-0">
+            <div className="flex flex-col lg:flex-row items-stretch justify-between gap-6">
+                <div className="lg:w-1/5 w-full flex justify-center">
+                    <img src={verticalbanner} alt="Vertical Banner" className="w-full h-full object-cover" />
+                </div>
+                <div className="lg:w-4/5 w-full">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6  h-full">
+                        {products.map((product) => (
+                            <ProductCard key={product.id} product={product} />
+                        ))}
+                    </div>
+                </div>
+            </div>
+            <div className="w-full h-[0px] border-t border-gray-700 my-16 mx-auto"></div>
+
+            <div className="flex justify-center items-center px-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 lg:grid-cols-3 gap-6 p-6">
+                    {[
+                        {
+                            title: "Free Shipping",
+                            desc: "On Orders Over $50",
+                            icon: "M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z",
+                        },
+                        {
+                            title: "Online Payment",
+                            desc: "Instantly Pay Online",
+                            icon: "M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z",
+                        },
+                        {
+                            title: "24 X 7 Service",
+                            desc: "Our Service is Available 24/7",
+                            icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z",
+                        },
+                    ].map((feature, index) => (
+                        <div key={index} className="bg-secondary text-center p-6 rounded-lg flex items-center justify-center cursor-pointer">
+                            <div className="flex items-center space-x-4 justify-center">
+                                <div className="w-20 h-20 rounded-full flex items-center justify-center">
+                                    <svg
+                                        className="w-20 h-20 text-mainText"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            strokeWidth="2"
+                                            d={feature.icon}
+                                        ></path>
+                                    </svg>
+                                </div>
+                                <div className="flex flex-col items-start hover:text-white">
+                                    <h4 className="text-white font-bold text-start">{feature.title}</h4>
+                                    <p className="text-start">{feature.desc}</p>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
             </div>
 
-            <motion.div
-                ref={containerRef}
-                className="flex space-x-6 overflow-x-auto scrollbar-hide scroll-smooth py-5 snap-x snap-mandatory"
-            >
-                {products.concat(products).map((product, index) => (
-                   <motion.div 
-                   key={index}   
-                   className="snap-center flex-shrink-0 w-[100%] sm:w-[60%] md:w-[50%] lg:w-[350px]"
-               >
-                        <ProductCard product={product} />
-                    </motion.div>
-                ))}
-            </motion.div>
 
-        </div>
+            <div className="w-full h-[0px] border-t border-gray-700 mt-16 mx-auto"></div>
+
+        </section>
+
+
     );
 };
 

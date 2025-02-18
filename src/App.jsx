@@ -12,7 +12,6 @@ import NavbarMobile from './components/Navbar/NavbarItemsMobile';
 import NavbarItems from './components/Navbar/navbarItems';
 import HeroSection from './components/Home/HeroSection';
 import BlogSection from './components/Home/BlogSection';
-import ShopSection from './components/Home/ShopSection';
 import Footer from './components/Home/FooterSection';
 
 
