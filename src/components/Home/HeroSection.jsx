@@ -11,7 +11,7 @@ const HeroSection = () => {
   return (
     <>
       <div
-        className="w-full h-[100vh] lg:h-[100vh] bg-cover bg-center bg-no-repeat"
+        className="w-full h-[100vh] lg:h-[100vh] bg-cover bg-center bg-no-repeat cursor-pointer"
         style={{ backgroundImage: `url(${backgroundbanner})` }}
       ></div>
       <WelcomeSection />
