@@ -1,8 +1,8 @@
 import React from "react";
-import prod1 from "../../assets/prod1.png";
-import prod2 from "../../assets/prod2.png";
-import prod3 from "../../assets/prod3.png";
-import prod4 from "../../assets/prod4.png";
+import prod1 from "/assets/prod1.png";
+import prod2 from "/assets/prod2.png";
+import prod3 from "/assets/prod3.png";
+import prod4 from "/assets/prod4.png";
 
 
 import ProductCard from "./Product";

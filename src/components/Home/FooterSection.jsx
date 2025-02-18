@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { FaArrowUp } from "react-icons/fa";
-import logo from "../../assets/footerlogo.png"
+import logo from "/assets/footerlogo.png"
 
 
 const Footer = () => {

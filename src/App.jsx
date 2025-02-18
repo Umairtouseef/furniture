@@ -5,7 +5,7 @@ import { RiMenuFold4Fill } from "react-icons/ri";
 import { RiAccountCircle2Line } from "react-icons/ri";
 import { RiMenuUnfold2Line } from "react-icons/ri";
 import { MdFavoriteBorder, MdFavorite } from "react-icons/md";
-import logo from "./assets/logo.png"
+import logo from "/assets/logo.png"
 import Sidebar from './components/Home/Sidebar';
 import SidebarMobile from './components/Home/SidebarMobile';
 import NavbarMobile from './components/Navbar/NavbarItemsMobile';

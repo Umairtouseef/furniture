@@ -1,5 +1,5 @@
 import React from "react";
-import backgroundbanner from "../../assets/mainbanner.png"
+import backgroundbanner from "/assets/mainbanner.png"
 import WelcomeSection from "../Home/WelcomeSection";
 import FeaturesSection from "../Home/FeaturedSection";
 import ProductList from "../Home/ProductList";
