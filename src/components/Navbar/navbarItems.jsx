@@ -83,7 +83,7 @@ const NavbarItems = () => {
 
                                 return menuItem.title === "Home" ? (
                                     <div key={index} className="relative w-full ml-5 ">
-                                        <div className="relative flex items-center w-full p-0  text-left select-none text-blue-gray-900 ml-5">
+                                        <div className="relative flex items-center w-full p-0  text-left select-none text-blue-gray-900 ml-5 mt-1">
                                             <span class="relative flex items-center justify-between w-full group cursor-pointer  ">
                                                 <p className="block font-sans text-base antialiased font-normal leading-relaxed text-blue-gray-900 ml-5 relative">
                                                     {menuItem.title}
