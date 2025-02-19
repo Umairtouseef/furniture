@@ -85,7 +85,7 @@ const ProductList = () => {
                     <img src={verticalbanner} alt="Vertical Banner" className="w-full h-full object-cover" />
                 </div>
                 <div className="lg:w-4/5 w-full">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6  h-full">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6  h-full">
                         {products.map((product) => (
                             <ProductCard key={product.id} product={product} />
                         ))}
@@ -95,7 +95,7 @@ const ProductList = () => {
             <div className="w-full h-[0px] border-t border-gray-700 my-16 mx-auto"></div>
 
             <div className="flex justify-center items-center px-4">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 lg:grid-cols-3 gap-6 p-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
         {[
           {
             title: "Free Shipping",

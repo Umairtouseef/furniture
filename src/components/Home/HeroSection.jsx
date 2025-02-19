@@ -10,10 +10,11 @@ import ThreeSectionGrid from "./SaleOff";
 const HeroSection = () => {
   return (
     <>
-      <div
-        className="w-full h-[100vh] lg:h-[100vh] bg-cover bg-center bg-no-repeat cursor-pointer"
-        style={{ backgroundImage: `url(${backgroundbanner})` }}
-      ></div>
+      <img
+        src={backgroundbanner}
+        alt="Background Banner"
+        className="w-full object-cover cursor-pointer"
+      />
       <WelcomeSection />
       <ThreeSectionGrid />
       <ProductList />
