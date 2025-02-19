@@ -102,7 +102,7 @@ const WelcomeSection = () => {
 
 
 
-      <div className="text-center mt-8">
+      <div className="text-center mt-16">
         <h4 className="text-paragraph font-medium">Special Offer</h4>
         <h2 className="text-h2 text-heading font-bold mt-2">TOP COLLECTION</h2>
         <div className="w-20 border-t-4 border-mainText bg-mainText my-6 mx-auto"></div>

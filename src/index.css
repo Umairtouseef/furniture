@@ -49,6 +49,9 @@ p {
 }
 
 @media (max-width: 768px) {
+  h2 {
+    font-size: theme('fontSize.medium'); 
+  }
   h1 {
     font-size: theme('fontSize.medium'); 
   }

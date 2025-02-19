@@ -89,7 +89,7 @@ const NavbarMobile = ({ isOpen, toggleSidebar }) => {
               {sidebarData.map((category, index) => (
                 <div key={index} className="mb-4">
                   <div
-                    className="flex justify-between items-center cursor-pointer font-medium text-heading"
+                    className="flex justify-between items-center cursor-pointer font-medium "
                     onClick={() => toggleSection(index)}
                   >
                     {category.title}
