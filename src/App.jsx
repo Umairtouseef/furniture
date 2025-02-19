@@ -20,13 +20,17 @@ import NavbarItems from "./components/Navbar/navbarItems";
 import HeroSection from "./components/Home/HeroSection";
 import BlogSection from "./components/Home/BlogSection";
 import Footer from "./components/Home/FooterSection";
+import Cart from "./components/Home/CartSection";
 
 function App() {
   const [cartCount] = useState(0);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
   const [isHeartFilled, setIsHeartFilled] = useState(false);
-  const [cartItemCount, setCartItemCount] = useState(2);
+  const [isCartOpen, setIsCartOpen] = useState(false);
+
+
+  const cartItemCount = 3;
 
   const handleHeartClick = () => {
     setIsHeartFilled(!isHeartFilled);
@@ -104,10 +108,14 @@ function App() {
               <button className="text-heading hover:text-primary">
                 <FiSettings size={25} />
               </button>
-              <button className="relative text-heading hover:text-primary">
-                <FiShoppingCart size={25} />
+
+              <button
+                onClick={() => setIsCartOpen(true)}
+                className="text-white hover:text-heading hover:text-primary relative"
+              >
+                <FiShoppingCart size={24} />
                 {cartItemCount > 0 && (
-                  <span className="absolute top-[-5px] right-[-5px] w-5 h-5 bg-yellowbg text-white text-xs font-semibold rounded-full flex items-center justify-center">
+                  <span className="absolute top-[-10px] right-[-10px] w-5 h-5 bg-yellowbg text-white text-xs font-semibold rounded-full flex items-center justify-center">
                     {cartItemCount}
                   </span>
                 )}
@@ -120,6 +128,7 @@ function App() {
           toggleSidebar={() => setIsNavbarOpen(false)}
         />
       </header>
+      <Cart isOpen={isCartOpen} setIsOpen={setIsCartOpen} />
 
       <HeroSection />
       {/* <ShopSection /> */}
