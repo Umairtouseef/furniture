@@ -1,7 +1,11 @@
+import { useNavigate } from "react-router-dom";
 import { FaTrash, FaEdit, FaTruck } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const Cart = ({ isOpen, setIsOpen }) => {
+  const navigate = useNavigate();
+
+
     const cart = [
         {
             id: 1,
@@ -189,6 +193,8 @@ const Cart = ({ isOpen, setIsOpen }) => {
                             type="button"
                             className="flex-1 bg-mainText text-white py-3 rounded hover:bg-opacity-80"
                             aria-label="View Cart"
+              onClick={() => navigate("/cart")}
+
                         >
                             View Cart
                         </button>
@@ -196,6 +202,7 @@ const Cart = ({ isOpen, setIsOpen }) => {
                             type="button"
                             className="flex-1 bg-mainText text-white py-3 rounded hover:bg-opacity-80"
                             aria-label="Proceed to Checkout"
+                            onClick={() => navigate("/checkout")}
                         >
                             Check Out
                         </button>

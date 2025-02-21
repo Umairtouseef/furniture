@@ -19,7 +19,6 @@ const HeroSection = () => {
       <ThreeSectionGrid />
       <ProductList />
       <BlogSection />
-      <Footer />
     </>
   );
 };

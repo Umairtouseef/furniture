@@ -78,7 +78,7 @@ const NavbarItems = () => {
                                                     ? "grid-cols-4"
                                                     : "grid-cols-4";    
 
-                                const dropdownPosition = menuItem.title === "Feature" ? "xl:left-[-500%] " : "left-0";
+                                const dropdownPosition = menuItem.title === "Feature" ? "xl:left-[-600%] " : "left-0";
 
 
                                 return menuItem.title === "Home" ? (
@@ -136,7 +136,7 @@ const NavbarItems = () => {
                                                     />
                                                 </svg>
                                                 <div
-                                                    className={`absolute ${dropdownPosition} top-[100%] z-10 p-4 text-sm font-normal bg-primary   rounded-lg shadow-lg w-[600px] xl:min-w-max
+                                                    className={`absolute ${dropdownPosition} top-[100%] z-10 p-4 text-sm font-normal bg-primary   rounded-lg shadow-lg w-[200px] xl:min-w-max
                  text-blue-gray-500 shadow-blue-gray-500/10 opacity-0 scale-95 pointer-events-none 
                 group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto transition-all duration-200 ease-in-out`}
                                                 >
