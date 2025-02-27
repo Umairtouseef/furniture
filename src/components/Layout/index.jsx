@@ -13,6 +13,7 @@ import NavbarMobile from "../Navbar/NavbarItemsMobile";
 import NavbarItems from "../Navbar/navbarItems";
 import Footer from "../Home/FooterSection";
 import Cart from "../Home/CartSection";
+import { Link } from "react-router-dom";
 
 function Layout({children}) {
   const [cartCount] = useState(0);
@@ -33,6 +34,7 @@ function Layout({children}) {
           <div className="flex flex-col xl:flex-row justify-between items-center">
             <div className="w-full flex flex-row justify-between items-center ">
               <div className="flex flex-row justify-between w-full ">
+                <Link to="/">
                 <img
                   src={
                     "https://themes.pixelstrap.com/multikart/assets/images/furniture-3/logo.png"
@@ -40,6 +42,8 @@ function Layout({children}) {
                   alt="Naturekart Logo"
                   className="w-40 h-30 "
                 />
+                </Link>
+               
                 <div className=" lg:hidden ">
                   <button
                     className="text-white hover:text-primary   "

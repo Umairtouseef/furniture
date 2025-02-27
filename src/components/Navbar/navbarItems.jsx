@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const NavbarItems = () => {
     const menuItems = [
@@ -27,7 +28,7 @@ const NavbarItems = () => {
         {
             title: "Shops",
             fashionTypes: {
-                "SUMMER FASHION": ["Home", "About", "Services", "Contact"],
+                "VENDOR SHOPS": ["SHOP1", "SHOP2", "SHOP3", "SHOP4"],
 
             },
             image: "",
@@ -76,7 +77,7 @@ const NavbarItems = () => {
                                                 ? "grid-cols-3"
                                                 : fashionTypeCount <= 4
                                                     ? "grid-cols-4"
-                                                    : "grid-cols-4";    
+                                                    : "grid-cols-4";
 
                                 const dropdownPosition = menuItem.title === "Feature" ? "xl:left-[-600%] " : "left-0";
 
@@ -85,11 +86,13 @@ const NavbarItems = () => {
                                     <div key={index} className="relative w-full ml-5 ">
                                         <div className="relative flex items-center w-full p-0  text-left select-none text-blue-gray-900 ml-5 mt-1">
                                             <span class="relative flex items-center justify-between w-full group cursor-pointer  ">
-                                                <p className="block font-sans text-base antialiased font-normal leading-relaxed text-blue-gray-900 ml-5 relative">
-                                                    {menuItem.title}
+                                                <Link to="/">
 
-                                                </p>
+                                                    <p className="block font-sans text-base antialiased font-normal leading-relaxed text-blue-gray-900 ml-5 relative">
+                                                        {menuItem.title}
 
+                                                    </p>
+                                                </Link>
                                                 {menuItem.title !== "Home" && (
                                                     <svg
                                                         xmlns="http://www.w3.org/2000/svg"
@@ -159,7 +162,10 @@ const NavbarItems = () => {
                                                                                             href="#"
                                                                                             className="hover:underline"
                                                                                         >
-                                                                                            {link}
+                                                                                            <Link to="/products">
+
+                                                                                                {link}
+                                                                                            </Link>
                                                                                         </a>
                                                                                     </li>
                                                                                 ))}

@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./src/Pages/Home";
 import Checkout from "./src/Pages/Checkout";
 import Cart from "./src/Pages/Cart";
+import Products from "./src/Pages/Products";
+import Product from "./src/Pages/Product";  
 
 
 
@@ -13,7 +15,8 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/cart" element={<Cart />} />
-
+        <Route path="/products" element={<Products />} />
+        <Route path="/product" element={<Product />} />
       </Routes> 
     </Router>
   );
