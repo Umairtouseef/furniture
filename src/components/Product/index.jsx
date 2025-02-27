@@ -1,10 +1,10 @@
 import React from "react";
 import ProductImageSlider from "./Product";
-import CustomHeader from "../Customheader/CustomHeader";
 import ProductDesccription from "./ProductDescription";
 import Layout from "../Layout";
 import ProductSelection from "./ProductSelection";
 import TabsDescription from "./TabsDescription";
+import CustomHeader from "../CustomHeader/CustomHeader";
 
 const ProductPage = () => {
   return (
