@@ -4,14 +4,14 @@ import ProductDesccription from "./ProductDescription";
 import Layout from "../Layout";
 import ProductSelection from "./ProductSelection";
 import TabsDescription from "./TabsDescription";
-import CustomHeader from "../CustomHeader/CustomHeader";
+// import CustomHeader from "../CustomHeader/CustomHeader";
 
 const ProductPage = () => {
   return (
     <>
       <Layout>
         <div>
-          <CustomHeader title="Product" breadcrumbs={["Home", "Product"]} />
+          {/* <CustomHeader title="Product" breadcrumbs={["Home", "Product"]} /> */}
           <div className="container mx-auto px-4">
             <div className="flex flex-col lg:flex-row gap-6">
               <div className="w-full lg:w-[40%] space-y-6">
