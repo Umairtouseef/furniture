@@ -1,8 +1,8 @@
 import React from "react";
 import ProductListComponent from "./ProductListPage";
 import Layout from "../Layout";
-import CustomHeader from "../Customheader/CustomHeader";
 import StoreProfile from "./Profile";
+import CustomHeader from "../CustomHeader/CustomHeader";
 
 const ProductListPage = () => {
   return (
