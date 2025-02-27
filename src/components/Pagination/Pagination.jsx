@@ -6,7 +6,7 @@ const Pagination = ({ totalPages, currentPage, onPageChange }) => {
       <button
         onClick={() => onPageChange(currentPage - 1)}
         disabled={currentPage === 1}
-        className="px-3 py-2 border rounded  text-text disabled:opacity-50"
+        className="px-3 py-2 border rounded     "
       >
         &lt;
       </button>
@@ -18,7 +18,7 @@ const Pagination = ({ totalPages, currentPage, onPageChange }) => {
             key={pageNum}
             onClick={() => onPageChange(pageNum)}
             className={`px-3 py-2 border rounded font-secondary tracking-primary ${currentPage === pageNum
-              ? "bg-secondary text-tertiary"
+              ? "bg-mainText text-white"
               : "bg-primary text-mainText"
               }`}
           >
