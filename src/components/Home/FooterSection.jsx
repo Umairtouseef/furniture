@@ -43,9 +43,9 @@ const Footer = () => {
           <h3 className="text-medium font-primary font-bold flex items-center gap-2">
             <img 
 
-                src={"https://themes.pixelstrap.com/multikart/assets/images/furniture-3/logo.png"}
+                src={logo}
             
-             alt="Multikart Logo" className="h-8" /> 
+             alt="Multikart Logo" className="h-full" /> 
           </h3>
           <p className="text-paragraph">Discover the latest fashion trends, explore unique styles, and enjoy seamless shopping.</p>
           <div className="flex gap-4">

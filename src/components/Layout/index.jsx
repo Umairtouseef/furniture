@@ -9,6 +9,7 @@ import {
 import { RiAccountCircle2Line } from "react-icons/ri";
 import { RiMenuUnfold2Line } from "react-icons/ri";
 import { MdFavoriteBorder, MdFavorite } from "react-icons/md";
+import logo from "/assets/logo.png";
 import NavbarMobile from "../Navbar/NavbarItemsMobile";
 import NavbarItems from "../Navbar/navbarItems";
 import Footer from "../Home/FooterSection";
@@ -37,7 +38,7 @@ function Layout({children}) {
                 <Link to="/">
                 <img
                   src={
-                    "https://themes.pixelstrap.com/multikart/assets/images/furniture-3/logo.png"
+                    logo
                   }
                   alt="Naturekart Logo"
                   className="w-40 h-30 "
