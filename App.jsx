@@ -5,12 +5,14 @@ import Checkout from "./src/Pages/Checkout";
 import Cart from "./src/Pages/Cart";
 import Products from "./src/Pages/Products";
 import Product from "./src/Pages/Product";  
+import ScrollToTop from "./src/components/ScrollErrorFree/ScrollErrorFree";
 
 
 
 const App = () => {
   return (
     <Router>
+      <ScrollToTop/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/checkout" element={<Checkout />} />
