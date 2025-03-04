@@ -5,7 +5,7 @@ import Checkout from "./src/Pages/Checkout";
 import Cart from "./src/Pages/Cart";
 import Products from "./src/Pages/Products";
 import Product from "./src/Pages/Product";  
-import ScrollToTop from "./src/components/ScrollErrorFree/ScrollErrorFree";
+import ScrollToTop from "./src/components/ScrollToTop/ScrollToTop";
 
 
 
